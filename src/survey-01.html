@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="//www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+<script type="text/javascript">
+function save() {
+Parse.initialize("MhRNAkuavC8yd6uRw1Sq7AkuJ71TNSC3nB7kV7sK", "DapW6mae14F4ienjxKqHxf30GGv1Pw8rowYwSpoj");
+var TestObject = Parse.Object.extend("survey");
+var testObject = new TestObject();
+var Location = document.getElementById("TextLocation").value;
+var SurveyName = document.getElementById("TextSurveyName").value;
+var Description = document.getElementById("TextDescription").value;
+var StartDate = document.getElementById("TextStartDate").value;
+var EndDate = document.getElementById("TextEndDate").value;
+var Question1 = document.getElementById("TextQuestion1").value;
+var Question2 = document.getElementById("TextQuestion2").value;
+var Question3 = document.getElementById("TextQuestion3").value;
+var Question4 = document.getElementById("TextQuestion4").value;
+var Question5 = document.getElementById("TextQuestion5").value;
+var Question6 = document.getElementById("TextQuestion6").value;
+var Question7 = document.getElementById("TextQuestion7").value;
+var Question8 = document.getElementById("TextQuestion8").value;
+var Question9 = document.getElementById("TextQuestion9").value;
+var Question10 = document.getElementById("TextQuestion10").value;
+var Question11 = document.getElementById("TextQuestion11").value;
+var Question12 = document.getElementById("TextQuestion12").value;
+alert(SurveyName);
+if (SurveyName.length != 0 ) {
+testObject.save({
+Location: Location, SurveyName: SurveyName, Description: Description,
+StartDate: StartDate, EndDate: EndDate,
+Question1: Question1,
+Question2: Question2,
+Question3: Question3,
+Question4: Question4,
+Question5: Question5,
+Question6: Question6,
+Question7: Question7,
+Question8: Question8,
+Question9: Question9,
+Question10: Question10,
+Question11: Question11,
+Question12: Question12
+}).then(function (object) {
+alert("yay! it worked");
+});
+}
+else { alert("yay! it did not work"); }
+}
+</script>
+　
+　
+<title>Maintain Surveys</title>
+<style type="text/css">
+.auto-style2 {
+width: 222px;
+}
+.auto-style3 {
+width: 185px;
+}
+.auto-style4 {
+width: 131px;
+}
+#Text1 {
+width: 115px;
+}
+.auto-style5 {
+width: 100%;
+}
+.auto-style6 {
+width: 177px;
+}
+#Text4 {
+width: 679px;
+}
+#Text5 {
+width: 679px;
+}
+#Text6 {
+width: 679px;
+}
+#Text7 {
+width: 679px;
+}
+#Text8 {
+width: 679px;
+}
+#Text9 {
+width: 679px;
+}
+#Text10 {
+width: 679px;
+}
+#Text11 {
+width: 679px;
+}
+#Text12 {
+width: 679px;
+}
+#Text13 {
+width: 679px;
+}
+#Text14 {
+width: 679px;
+}
+#Text15 {
+width: 679px;
+}
+#Text16 {
+width: 679px;
+}
+#SubmitReset {
+width: 85px;
+}
+#SubmitSave {
+width: 78px;
+}
+</style>
+</head>
+<body>
+<form name="survey" id="form1">
+<div>
+<table style="width: 100%;">
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td>&nbsp;</td>
+<td style="font-size:x-large" ">Add Survey</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2"></td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">Survey Name:</td>
+<td class="auto-style2">
+<input id="TextSurveyName" type="text" />
+</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">Description:</td>
+<td class="auto-style2">
+<input id="TextDescription" type="text" />
+</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">Start Date:</td>
+<td class="auto-style2">
+<input id="TextStartDate" type="text" />
+</td>
+<td class="auto-style3">End Date:</td>
+<td>
+<input id="TextEndDate" type="text" />
+</td>
+</tr>
+<tr>
+<td class="auto-style4">Location:</td>
+<td class="auto-style2">
+<input id="TextLocation" type="text" />
+</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2">
+&nbsp;
+</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2">&nbsp;</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<table class="auto-style5">
+<tr>
+<td class="auto-style6">Question 1:</td>
+<td><input id="TextQuestion1" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 2:</td>
+<td><input id="TextQuestion2" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 3:</td>
+<td><input id="TextQuestion3" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 4:</td>
+<td><input id="TextQuestion4" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 5:</td>
+<td><input id="TextQuestion5" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 6:</td>
+<td><input id="TextQuestion6" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 7:</td>
+<td><input id="TextQuestion7" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 8:</td>
+<td><input id="TextQuestion8" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 9:</td>
+<td><input id="TextQuestion9" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 10:</td>
+<td><input id="TextQuestion10" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 11:</td>
+<td><input id="TextQuestion11" type="text" /></td>
+</tr>
+<tr>
+<td class="auto-style6">Question 12:</td>
+<td><input id="TextQuestion12" type="text" /></td>
+</tr>
+</table>
+<table style="width: 100%;">
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2"></td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2">
+&nbsp;
+</td>
+<td class="auto-style3">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="auto-style4">&nbsp;</td>
+<td class="auto-style2">&nbsp;</td>
+<td class="auto-style3">
+<input id="SubmitSave" type="submit" onClick="save();" value="Save" />
+</td>
+<td>
+<input id="SubmitReset" type="submit" value="Reset" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+

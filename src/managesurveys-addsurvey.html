@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row clearfix">
+	<div class="col-md-12 column">
+	   <nav class="navbar navbar-default" role="navigation">
+	   <div class="navbar-header">
+	       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="../src/home.html">Home</a>
+	   </div>
+				
+	   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	       <ul class="nav navbar-nav">
+		   <li><a href="../src/login.html">Login</a></li>
+		   <!-- <li><a href="#">Admin</a></li>  -->
+		   <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<strong class="caret"></strong></a>
+		      <ul class="dropdown-menu">
+			 <li><a href="../src/admin-createuser.html">Create User</a></li>
+			 <li><a href="../src/admin-updateuser.html">Update</a></li>
+			 <li><a href="../src/admin-deleteuser.html">Delete</a></li>
+			 <li class="divider"></li>
+			 <li><a href="#">Browse</a></li>
+		     </ul>
+		   </li>
+		   <li class="dropdown">
+		      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Surveys<strong class="caret"></strong></a>
+		      <ul class="dropdown-menu">
+			 <li><a href="managesurveys-addsurvey.html">Create Survey</a></li>
+			 <li><a href="managesurveys-listsurveys.html">List Surveys</a></li>
+			 <li><a href="#">Something else here</a></li>
+			 <li class="divider"></li>
+			 <li><a href="#">Separated link</a></li>
+			 <li class="divider"></li>
+			 <li><a href="#">One more separated link</a></li>
+		     </ul>
+		   </li>
+		</ul>
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> <button type="submit" class="btn btn-default">Search</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Twilio Admin</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<div class="jumbotron">
+				<h1>
+					Welcome to NewCourse
+				</h1>
+				<p>
+					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>
+        <div class="row clearfix">
+          <div class="col-md-12 column">
+             <h3>Create Survey</h3>
+             <form role="form">
+                <div class="form-group">
+                   <label for="Location">Location</label><input type="text" class="form-control" id="TextLocation">
+                </div>
+                <div class="form-group">
+                   <label for="SurveyName">Survey Name</label><input type="text" class="form-control" id="TextSurveyName">
+                </div>
+                <div class="form-group">
+                   <label for="Description">Description</label><input type="text" class="form-control" id="TextDesscription">
+                </div>
+                <div class="form-group">
+                   <label for="StartDate">Start Date</label><input type="text" class="form-control" id="TextStartDate">
+                </div>
+                <div class="form-group">
+                   <label for="EndDate">End Date</label><input type="text" class="form-control" id="TextEndDate">
+                </div>
+                <div class="form-group">
+                   <label for="Question1">Question 1</label><input type="text" class="form-control" id="TextQuestion1">
+                </div>
+                <div class="form-group">
+                   <label for="Question2">Question 2</label><input type="text" class="form-control" id="TextQuestion2">
+                </div>
+                <div class="form-group">
+                   <label for="Question3">Question 3</label><input type="text" class="form-control" id="TextQuestion3">
+                </div>
+                <div class="form-group">
+                   <label for="Question4">Question 4</label><input type="text" class="form-control" id="TextQuestion4">
+                </div>
+                <div class="form-group">
+                   <label for="Question5">Question 5</label><input type="text" class="form-control" id="TextQuestion5">
+                </div>
+                <div class="form-group">
+                   <label for="Question6">Question 6</label><input type="text" class="form-control" id="TextQuestion6">
+                </div>
+                <div class="form-group">
+                   <label for="Question7">Question 7</label><input type="text" class="form-control" id="TextQuestion7">
+                </div>
+                <div class="form-group">
+                   <label for="Question8">Question 8</label><input type="text" class="form-control" id="TextQuestion8">
+                </div>
+                <div class="form-group">
+                   <label for="Question9">Question 9</label><input type="text" class="form-control" id="TextQuestion9">
+                </div>
+                <div class="form-group">
+                   <label for="Question10">Question 10</label><input type="text" class="form-control" id="TextQuestion10">
+                </div>
+                <div class="form-group">
+                   <label for="Question11">Question 11</label><input type="text" class="form-control" id="TextQuestion11">
+                </div>
+                <div class="form-group">
+                   <label for="Question12">Question 12</label><input type="text" class="form-control" id="TextQuestion12">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">Reset</button>
+            </form>
+          </div>
+        </div>  
+
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
