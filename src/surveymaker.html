@@ -1,0 +1,73 @@
+<head>
+ <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap-theme.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap-theme.min.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrp.css" type="text/css"/>
+</head>
+
+<body>
+<h1>
+	<form class="navbar-form navbar-left" name="make" > 
+			
+				<input class="form-control" type="text" name="sur" placeholder="surveynum" size="70" />
+				<input class="form-control" type="text" name="name" placeholder="surveyname" size="70" />
+				<input class="form-control" type="text" name="country" placeholder="country" size="70" />
+				<input class="form-control" type="text" name="ps" placeholder="province/state" size="70" />
+				<input class="form-control" type="text" name="city" placeholder="city" size="70" />
+				<input class="form-control" type="text" name="village" placeholder="village" size="70" />
+				<input class="form-control" type="text" name="climate" placeholder="climate" size="70" />
+				<input class="form-control" type="text" name="water" placeholder="water" size="70" />
+				<input class="form-control" type="text" name="mhealth" placeholder="mhealth" size="70" />
+				<input class="form-control" type="text" name="fhealth" placeholder="fhealth" size="70" />
+				<input class="form-control" type="text" name="gfeel" placeholder="gfeel" size="70" />
+				
+				<button class="btn btn-primary btn-large" type="submit" onClick="huzah();"> Add survey </button>
+	</form>
+</h1>
+
+ <script type="text/javascript">
+    function huzah(){
+	Parse.initialize("MhRNAkuavC8yd6uRw1Sq7AkuJ71TNSC3nB7kV7sK", "DapW6mae14F4ienjxKqHxf30GGv1Pw8rowYwSpoj");
+    
+    var Surveys = Parse.Object.extend("Surveys");
+    var surveys = new Surveys();
+	
+	var a = document.make.sur.value;
+	var b = document.make.name.value;
+	var c = document.make.country.value;
+	var d = document.make.ps.value;
+	var e = document.make.city.value;
+	var f = document.make.village.value;
+	var g = document.make.climate.value;
+	var h = document.make.water.value;
+	var i = document.make.mhealth.value;
+	var j = document.make.fhealth.value;
+	var k = document.make.gfeel.value;
+	
+	if(a==""){
+	a = "is empty";
+	b = "isempty";
+	}
+	
+      surveys.save({sur: a, name: b, country: c, ps: d, city: e, village: f, climate: g, water: h, mhealth: i, fhealth: j, generalFeel: k}, {
+      success: function(object) {
+        $(".success").show();
+      },
+      error: function(model, error) {
+        $(".error").show();
+      }
+    });
+	}
+  </script>
+</body>
+
+</html>

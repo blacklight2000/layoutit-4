@@ -1,0 +1,98 @@
+<head>
+ <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap-theme.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap-theme.min.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="http://localhost/NewCourse/layoutit/src/css/bootstrp.css" type="text/css"/>
+</head>
+
+<body>
+<h1>survey viewer</h1>
+
+	<button class="btn btn-primary btn-large" type="button" onClick="jes();"> View survey </button>
+
+	<table class="table" id="viewit">
+	</table>
+
+
+ <script type="text/javascript">
+
+    function jes(){
+	Parse.initialize("MhRNAkuavC8yd6uRw1Sq7AkuJ71TNSC3nB7kV7sK", "DapW6mae14F4ienjxKqHxf30GGv1Pw8rowYwSpoj");
+	//var a = document.fert.dum.value;
+
+	var SomeObject = Parse.Object.extend("Questions");
+    var query = new Parse.Query(SomeObject);
+	
+	query.find({
+	success: function(results) {
+    alert("Successfully retrieved " + results.length + " scores.");
+    var tEdit = document.getElementById("viewit");
+	//Do something with the returned Parse.Object values
+    for (var i = 0; i < results.length; i++) { 
+      var object = results[i];
+      var row = tEdit.insertRow(i);
+	  if(i % 2 == 0){ 
+        tEdit.rows[i].className = "active"; 
+      }else{ 
+        tEdit.rows[i].className = "danger"; 
+      }       
+	  for(var j = 0;j < 9;j++)
+	  {
+	  var cell = row.insertCell(j);
+	  switch(j)
+		{
+		case 0:
+		  cell.innerHTML = object.id;
+		  break;
+		case 1:
+		  cell.innerHTML = object.get('question')
+		  break;
+		case 2:
+		  cell.innerHTML = object.get('answer1')
+		  break;
+		case 3:
+		  cell.innerHTML = object.get('answer2')
+		  break;
+		case 4:
+		  cell.innerHTML = object.get('answer3')
+		  break;
+		case 5:
+		  cell.innerHTML = object.get('answer4')
+		  break;
+		case 6:
+		  cell.innerHTML = object.get('answer5')
+		  break;
+		case 7:
+		  cell.innerHTML = object.get('answer6')
+		  break;
+		case 8:
+		  cell.innerHTML = object.get('answer7')
+		  break;
+		case 9:
+		  cell.innerHTML = object.get('answer8')
+		  break;
+		default:
+		  cell.innerHTML = "Empty"
+		}
+	  }
+	  
+    }
+  },
+  error: function(error) {
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+}
+  </script>
+</body>
+
+</html>
